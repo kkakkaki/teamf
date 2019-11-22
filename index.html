@@ -6,7 +6,9 @@
         <link rel="stylesheet" href="./css/reset.css">
         <link rel="stylesheet" href="./css/style.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+JP&display=swap">
-        <script src="js/TweenMax.min.js"></script>
+        <script src="./js/gsap.min.js"></script>
+        <script src="./js/vue.min.js"></script>
+        <script src="./js/jquery-3.4.1.min.js"></script>
     </head>
     <body>
         <div class="container">
@@ -40,7 +42,7 @@
                             <span></span>
                             <span></span>
                     </div>
-                    <div class="glb-menu-lower-outer">
+                    <div class="glb-menu-lower-outer" id="down">
                         <ul class="glb-menu-lower">
                             <li>
                                 <a href=#>HOME</a>
@@ -85,4 +87,38 @@
             </footer>
         </div><!-- /container -->
     </body>
+
+
+    <script>
+        // 背景の図形アニメーション
+        gsap.to(".bgbox-1", {rotation:450, duration:60});
+        gsap.to(".bgbox-2", {rotation:-300, duration:60});
+        gsap.to(".bgbox-3", {rotation:-1000, duration:60});
+        gsap.to(".bgbox-4", {rotation:1500, duration:60});
+        gsap.to(".bgbox-5", {rotation:-1500, duration:60});
+        gsap.to(".bgbox-6", {rotation:3000, duration:60});
+        gsap.to(".bgbox-7", {rotation:-3500, duration:60});
+
+        // スクロール・イベント
+        $(window).on("scroll", function() {
+            var scrollPos = $(this).scrollTop();
+
+            // ハンバーガーメニューの有無
+            if(scrollPos > 50) {
+                $('.glb-menu-hbg').addClass('glb-menu-hbg-appear');
+            };
+            if(scrollPos < 50) {
+                $('.glb-menu-hbg').removeClass('glb-menu-hbg-appear');
+                $('.glb-menu-hbg').removeClass('close');
+                $('.glb-menu-lower-outer').removeClass('down');
+            };
+        });
+
+        $('.glb-menu-hbg').click(function() {
+            $(this).toggleClass( 'close' );
+            $('.glb-menu-lower-outer').toggleClass('down');
+        })
+        </script>
+
+
 </html>
