@@ -30,7 +30,7 @@ a:active {
 }
 p{
 	font-size: 100%;
-	line-height: 170%;
+	line-height: 120%;
 }
 img {
 	border: 0;
@@ -40,6 +40,8 @@ img {
 .container{
     width: 960px;
     margin: 0 auto;
+    position: relative;
+    z-index: 10;
 }
 
 header{
@@ -56,16 +58,78 @@ header{
 .glb-menu{
     width: 480px;
     margin-top: 40px;
+    position: relative;
 }
 
-.glb-menu ul{
+.glb-menu ul.glb-menu-pgtop{
     display: flex;
-    justify-content: space-between; /* 左右均等分布 */
+    justify-content: stretch;
 }
 
-.glb-menu ul li{
+.glb-menu ul.glb-menu-pgtop li{
+    margin: 0 15px;
     font-size: 125%;
 }
+
+
+
+/* ハンバーガーメニュー */
+.glb-menu-hbg{
+    width: 70px;
+    height: 70px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 100;
+    background-color: #5D757D;
+}
+
+.glb-menu-hbg span {
+    position: absolute;/*fixedを起点に位置を指定*/
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: #FFF;
+    transform: rotateZ(15deg);
+    transition: all 0.5s;
+}
+
+.glb-menu-hbg span:first-of-type {
+    top: 20px;
+    left: 5px;
+}
+.glb-menu-hbg span:nth-of-type(2) {
+    top: 34px;
+    left: 5px;
+}
+.glb-menu-hbg span:last-of-type {
+    bottom: 20px;
+    left: 5px;
+}
+
+.glb-menu .glb-menu-lower-outer{
+    width: 200px;
+    height: 200px;
+    padding: 20px;
+    position: fixed;
+    /* top: -250px; */
+    top: 70px;
+    right: 70px;
+    z-index: 100;
+    background-color: rgb(178, 213, 226);
+}
+
+.glb-menu ul.glb-menu-lower{
+    
+}
+
+.glb-menu ul.glb-menu-lower li{
+    font-size: 155%;
+    line-height: 200%;
+    text-align: right;
+}
+
+
 
 .main-visual{
     position: relative;
@@ -137,4 +201,9 @@ header{
 .bgbox-7{
     top: 378px;
     left: 33px;
+}
+
+
+main{
+    height: 2000px;
 }
