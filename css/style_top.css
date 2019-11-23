@@ -11,28 +11,28 @@ body {
 	min-width: 460px;
 }
 
-a:link {
+.container a:link {
 	text-decoration: none;
 	color: #5D757D;
 }
-a:visited {
+.container a:visited {
 	text-decoration: none;
 	color: #5D757D;
 }
-a:hover {
+.container a:hover {
 	text-decoration: none;
     color: rgb(127, 160, 172);
     opacity: 0.8;
 }
-a:active {
+.container a:active {
 	text-decoration: none;
     color: rgb(127, 160, 172);
 }
-p{
+/* .container p{
 	font-size: 100%;
 	line-height: 120%;
-}
-img {
+} */
+.container img {
 	border: 0;
 }
 
@@ -229,6 +229,152 @@ header{
 }
 
 
-main{
-    height: 2000px;
+/*  橋本  */
+.main-content{
+    color:#5D757D;
+    font-family: 'Noto Sans JP', sans-serif;
+  }
+  
+  .box1 {
+      width:400px;
+      height:300px;
+      padding: 0.5em 1em;
+      margin: 2em 0;
+      color: #2c2c2f;
+      background: #62C3E3;/*背景色*/
+      transform: rotate(10deg);
+  }
+  
+  .box2 {
+      width:50px;
+      height:50px;
+      color: #2c2c2f;
+      border: solid 3px #92B9BA;
+      transform: rotate(-20deg);
+      margin-left: 650px;
+  }
+  
+  .relative_big-box {
+      position: relative;
+      width: 400px;
+  }
+  .absolute_big-box {
+      position: absolute;
+      bottom: 350px;
+      left:160px;
+      margin-bottom: -340px;
+  }
+  
+  .relative_small-box {
+      position: relative;
+      width: 400px;
+  
+  }
+  .absolute_small-box {
+      position: absolute;
+      left:160px;
+      margin-top:-160px;
+  }
+  
+  .trim {
+      overflow: hidden;
+      width: 280px;
+      height: 280px;
+      position: relative;
+  }
+  
+  .left{
+      float:left;
+  }
+  
+  .right{
+      float:right;
+  }
+  
+  .name{
+      margin-top:25px;
+      width:450px;
+      height:300px;
+  }
+  
+  .myname{
+      font-size: 50px;
+      line-height: 1.3;
+      font-weight:bold;
+      text-transform: uppercase;
+  }
+  
+  .job{
+      font-size: 35px;
+      line-height: 2.5rem;
+      font-weight:bold;
+      text-transform: uppercase;
+  }
+  
+  .small-font{
+      font-size: 20px;
+      line-height: 2.5rem;
+  }
+
+  .f_naname{
+      clear: both;
+      transform: rotate(30deg);
+      padding-top: 120px;
+      margin-left: 200px;
+  }
+  
+
+
+
+
+
+footer {
+    background-color: #6F6060;
+    color: aliceblue;
+    height: 250px;
+}
+
+/* 西村 追加 */
+.footer-area{
+    width: 1080px;
+    margin-left: 5%;
+}
+
+/* 西村 以下セレクタに親要素footerを追加 */
+
+footer img {
+    height: 23px;
+    width: 50px;
+    filter: brightness(10);/* 西村 追加 */
+}
+footer section {
+    margin-left: 50px;
+    display: flex;
+    align-items: center;
+}
+footer .menu {
+    margin-left: 300px;
+}
+footer div {
+    float: left;
+    margin: 10px 20px;
+    }
+
+
+footer h2,
+footer ul,
+footer li,
+footer a {
+    margin: 10px;
+    color: aliceblue;
+}
+footer a {
+    text-decoration: none;
+}
+footer small {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    clear: both;
 }

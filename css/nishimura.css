@@ -1,0 +1,95 @@
+@charset "UTF-8";
+
+
+.upper_area{
+    width: 800px;
+    height: 500px;
+    margin: 0 auto;
+    margin-top: 50px;
+    line-height: 1.5;
+    color: #5D757D;
+}
+
+.upper_inner{
+    width: 600px;
+    height: 400px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 5;
+}
+
+.img_box_upper{
+    position: absolute;
+    top: 100px;
+    left: 400px;
+}
+
+h1{
+    font-size: 350%;
+    font-weight: bold;
+}
+
+.role{
+    font-size: 250%;
+    font-weight: bold;
+}
+
+.upper_area p{
+    font-size: 120%;
+    line-height: 1.5;
+}
+
+.text_area_upper{
+    width: 400px;
+    height: 280px;
+    background-color: #E6EFF2;
+    transform: rotate(10deg);
+    position: absolute;
+    top:100px;
+    left: -50px;
+    z-index: -5;/* transformで親要素と相対的になれないので負の値 */
+}
+
+.lower_area{
+    width: 800px;
+    height: 500px;
+    margin: 0 auto;
+    margin-top: 50px;
+    line-height: 1.5;
+    color: #5D757D;
+    position: relative;
+    z-index: 5;
+}
+
+.lower_inner{
+    width: 300px;
+    height: 400px;
+    margin-left: 450px;
+    font-size: 120%;
+}
+
+.lower_inner dl{
+    font-weight: bolder;
+}
+
+.lower_inner dt{
+    padding-left: 1em;
+    margin-bottom: 25px;
+}
+
+.img_box_lower{
+    position: absolute;
+    top: 10px;
+    left: 90px;
+}
+
+.text_area_lower{
+    width: 400px;
+    height: 280px;
+    background-color: #E6EFF2;
+    transform: rotate(350deg);
+    position: absolute;
+    top:0;
+    left: 400px;
+    z-index: -5;/* transformで親要素と相対的になれないので負の値 */
+}
