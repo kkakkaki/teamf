@@ -4,8 +4,8 @@
         <meta charset="ja">
         <title>teamF member</title>
         <link rel="stylesheet" href="./css/reset.css">
-        <link rel="stylesheet" href="./css/style_top.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+JP&display=swap">
+        <link rel="stylesheet" href="./css/style_top.css">
         <script src="./js/gsap.min.js"></script>
         <script src="./js/jquery-3.4.1.min.js"></script>
     </head>
@@ -106,10 +106,10 @@
                                     好きなもの：自転車、DJ、美術
                                 </p>
                             </div>
-                            <div class="box2 absolute_small-box"></div>
+                            <div class="box2 absolute_small-box bgbox-a"></div>
                         </div>
                         <figure class="img_f">
-                            <img src="img/F.png" width="45" height="113" alt="F" class="f_naname">
+                            <img src="img/F.png" width="80" alt="F" class="f_naname f_a">
                         </figure>
                     </div>
                 </a>
@@ -139,10 +139,10 @@
                                     好きなもの：食べること
                                 </p>
                             </div>
-                            <div class="box2 absolute_small-box"></div>
+                            <div class="box2 absolute_small-box bgbox-b"></div>
                         </div>
                         <figure class="img_f">
-                            <img src="img/F.png" width="45" height="113" alt="F" class="f_naname">
+                            <img src="img/F.png" width="80" alt="F" class="f_naname f_b">
                         </figure>
                     </div>
                 </a>
@@ -151,7 +151,7 @@
                         <div class="left">
                             <div class="box1 relative_big-box"></div>
                             <figure class="absolute_big-box trim">
-                                <img src="img/taninaka.png" width="393" height=" 295" alt="イラスト1">
+                                <img src="img/taninaka.png" width="393" height="295" alt="イラスト1">
                             </figure>
                         </div>
                         <div class="name right">
@@ -172,10 +172,10 @@
                                     好きなもの：食べること
                                 </p>
                             </div>
-                            <div class="box2 absolute_small-box"></div>
+                            <div class="box2 absolute_small-box bgbox-c"></div>
                         </div>
                         <figure class="img_f">
-                            <img src="img/F.png" width="45" height="113" alt="F" class="f_naname">
+                            <img src="img/F.png" width="80" alt="F" class="f_naname f_c">
                         </figure>
                     </div>
                 </a>
@@ -247,8 +247,21 @@
                 $('.glb-menu-hbg').removeClass('close');
                 $('.glb-menu-lower-outer').removeClass('down');
             };
+
+            // 背景の四角とFの動き
+            $('.bgbox-a, .bgbox-c, .f_b').css({
+                'transform': 'rotate('+ scrollPos/10 +'deg)'
+            });
+            $('.f_a, .bgbox-b, .f_c').css({
+                'transform': 'rotate('+ (-scrollPos)/10 +'deg)'
+            });
+            $('.bgbox-a, .bgbox-b, .bgbox-c').css({
+                'margin-top': (-scrollPos/7)
+            });
         });
 
+
+        // ハンバーガーメニュー開閉
         $('.glb-menu-hbg').click(function() {
             $(this).toggleClass( 'close' );
             $('.glb-menu-lower-outer').toggleClass('down');

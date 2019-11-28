@@ -275,6 +275,11 @@ header{
       left:160px;
       margin-top:-160px;
   }
+/* スクロールエフェクト用 */
+  .absolute_small-box_after {
+      margin-top: -260px;
+      transform: rotate(180deg);
+  }
   
   .trim {
       overflow: hidden;
@@ -331,7 +336,7 @@ header{
 footer {
     background-color: #6F6060;
     color: aliceblue;
-    height: 250px;
+    height: 220px;
 }
 
 /* 西村 追加 */
